@@ -13,6 +13,7 @@ An in-depth paragraph about your project and overview of use.
 * Bootstrap
 * Tailwind
 * Jquery
+* VanilaJS
 
 
 
@@ -28,7 +29,8 @@ command to run if program contains helper info
 ```
 
 ## Authors
-
+Mailo
+Soren
 Sangbeom Yoo    [@SangYoo1324](https://sangbeomyooportfoliosite.netlify.app/)
 
 ## Version History
