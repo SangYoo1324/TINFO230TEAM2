@@ -30,7 +30,7 @@ command to run if program contains helper info
 
 ## Authors
 Mailo
-Soren
+Soren Dugger
 Sangbeom Yoo    [@SangYoo1324](https://sangbeomyooportfoliosite.netlify.app/)
 
 ## Version History
