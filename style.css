@@ -1,3 +1,4 @@
+/* Global settings  */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
 *{
@@ -24,12 +25,109 @@ li {
 
 }
 
+@media (max-width:1310px){
+    .pc-header{
+       display: none;
+   }
+   } 
+   
+    @media (min-width:1310px){
+       .mobile-header{
+           display:none;
+       }
+    }
+   
+/* Global settings :End  */
+
+/* pc-header  */
 .header-con{
 
 }
 
-.header-con>.header__menus-logo-wrap>
-.header__logo >.header__menus>ul>li{
-   
+.header__menus>ul>li{
+    font-size: 20px;;
+    padding: 15px;
+    font-weight: bold;
+    color: white;
+}
 
+.header__menus>ul>li:hover>a{
+    color:red;
+}
+
+
+
+.header__menus-2nd{
+ display:block;
+ overflow:hidden;
+ width: 250px;
+ position:absolute;
+ background-color: black;
+ top:67px;
+ padding-left: 10px;
+ height: 0;
+ transition: height 0.5s;
+}
+
+.header__menus-2nd.active{
+    height:200px;
+}
+
+
+.header__menus-2nd >li{
+    padding: 10px 0;
+    border-bottom: 1px solid white;
+}
+
+
+.header__Icons a:hover{
+ color: red;
+}
+/* .header__menus>ul>li:hover{
+    background-color: antiquewhite;
+} */
+
+.header__Icons>*{
+    margin-right: 15px;
+    margin-left: 15px;
+    font-size: 23px;
+}
+
+.horizontal-underline{
+    position: absolute;
+    width: 98px;
+    background-color:gray;
+    height: 4px;
+    top: 71px;
+    transition: 0.5s;
+    left:210px;
+}
+
+
+/* pc-header :end */
+
+/* .mobile-header  */
+
+/* .mobile-header :end */
+.footer-bar{
+    height: 680px;
+    background-color: black;
+}
+
+.footer-con{
+    max-width:1310px;
+    margin: 0 auto;
+}
+
+.footer__why-buy{
+    color: white;
+    padding: 30px 30px;
+}
+
+.footer__why-buy>h1{
+font-size: 25px;
+}
+
+.footer__why-buy>p{
+    font-size: 20px;
 }

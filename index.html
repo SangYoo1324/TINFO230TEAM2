@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="./bootstrapCSS_v5/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrapCSS_v5/bootstrap.min.css">
+
     <script src="https://kit.fontawesome.com/edff7358ca.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -13,28 +17,105 @@
     <title>Document</title>
 </head>
 <body>
-<header class="">
-    <div class="header-con bg-red-500 h-[50px] flex justify-between">
-        <div class="header__menus-logo-wrap flex items-center w-[40%] justify-between">
-            <div class="header__logo">Here comes LOGO</div>
-            <div class="header__menus">
-                <ul class="flex">
-                    <li >GAMING</li>
-                    <li>WORKSTATIONS</li>
-                    <li>ACCESORIES</li>
-                    <li>SPECIAL OFFERS</li>
+    <!-- pc-header  -->
+<header class="pc-header h-[80px]">
+    <div class="header-con bg-black h-full flex justify-between">
+        <div class="header__menus-logo-wrap flex items-center w-[60%] justify-between">
+            <div class="header__logo grow"><i class="fa-solid fa-desktop text-[25px] p-[20px] 
+               pr-[10px] text-red-500"></i>
+            <span class="text-[28px] text-red-500 ">ORIGIN</span>
+            </div>
+
+            <!-- nav-bars  -->
+            <div class="header__menus w-[80%] ">
+                <ul class="flex w-[100%]">
+                    <li class="relative"><a href="#"> GAMING</a>
+                    <ul class="header__menus-2nd">
+                        <li>Gaming Laptops</li>
+                        <li>Gaming PCs</li>
+                        <li>Ready To ship Systems</li>
+                        <li>Geforce RTX Desktops</li>
+                    </ul>
+                    </li>
+                    <li class="relative"><a href="#"> WORKSTATIONS</a>
+                    <ul class="header__menus-2nd">
+                        <li>Workstation Laptops</li>
+                        <li>Workstation Desktops</li>
+                        <li>Government & Corporate</li>
+                    </ul>
+                </li>
+                    <li class="relative"><a href="#"> ACCESORIES</a></li>
+                    <li class="relative"><a href="#">SPECIAL OFFERS</a>
+                        <ul class="header__menus-2nd">
+                            <li>Workstation Laptops</li>
+                            <li>Workstation Desktops</li>
+                            <li>Government & Corporate</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
+             <!-- nav-bars :end -->
         </div>
      
-        <div class="header__Icons flex">
-            <div class="search-icon"><i class="fa-brands fa-searchengin"></i></div>
-            <div class="sign-in">SIGN-IN</div>
-            <div class="cart-logo"><i class="fa-solid fa-cart-shopping-fast"></i></div>
+        <div class="header__Icons flex items-center w-[15%]">
+            <div class="search-icon text-white"><a href="#"><i class="fa-brands fa-searchengin"></i></a></div>
+            <div class="sign-in text-white"><a href=""><i class="fa-solid fa-user"></i>
+                SIGN-IN
+            </a>
+            </div>
+            <div class="cart-logo text-white"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></div>
         </div>
+
+        <div class="horizontal-underline"></div>
     </div>
 </header>
+ <!-- pc-header  :end-->
 
-    
+ <!-- mobile-header  -->
+ <header class="mobile-header">Mobile Header</header>
+  <!-- mobile-header  :end-->
+
+<!-- just temporary empty body  -->
+  <div class="temp-body h-[1000px]"></div>
+
+   <!-- footer -->
+  <footer class="footer-bar">
+    <div class="footer-con  h-full">
+        <div class="footer__why-buy">
+            <h1>WHY BUY FROM ORIGIN PC?</h1>
+            <p>
+                If you’re searching for the cheapest Gaming PC made with inferior
+                 products and questionable quality, you might as well leave
+                  now. ORIGIN PC only uses the highest quality performance
+                   Gaming PC components available. Every single <b href="#" class="text-red-500">customized
+                    Gaming PC</b>  and <b href="#" class="text-red-500">Gaming Laptop</b> is assembled right 
+                    here in the United States by highly trained and 
+                    incredibly skilled technicians and assembly engineers. 
+                    Sure, we can assemble our award-winning Gaming PCs overseas
+                     for less. In fact, that’s what most of our competitors do.
+                      However, we choose to assemble all our Gaming PCs right
+                       here in the United States because it gives us the best 
+                       control over manufacturing, performance, and overall 
+                       quality. And we’re thrilled to hire only the best PC 
+                       Builders in the country. 
+            </p>
+        </div>
+        <div class="footer__menus bg-red-500">
+            <div class="footer__menus-product">
+
+            </div>
+            <div class="footer__menus-company">
+
+            </div>
+        </div>
+
+    </div>
+  </footer>
+    <!-- footer :end -->
+
+
+    <script src="./script.js"></script>
+    <script src="./bootstrapJS_v5/bootstrap.bundle.js"></script>
+    <script src="./bootstrapJS_v5/bootstrap.bundle.min.js"></script>
 </body>
 </html>
