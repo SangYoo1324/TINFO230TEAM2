@@ -29,7 +29,7 @@ command to run if program contains helper info
 ```
 
 ## Authors
-Mailo
+Mailo Baca
 Soren Dugger
 Sangbeom Yoo    [@SangYoo1324](https://sangbeomyooportfoliosite.netlify.app/)
 
