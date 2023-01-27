@@ -40,6 +40,11 @@ li {
 /* Global settings :End  */
 
 /* pc-header  */
+header.pc-header{
+position:fixed;
+width: 100%;
+}
+
 .header-con{
 
 }
@@ -94,6 +99,7 @@ li {
 }
 
 .horizontal-underline{
+    display: none;
     position: absolute;
     width: 98px;
     background-color:gray;
@@ -109,6 +115,8 @@ li {
 /* .mobile-header  */
 
 /* .mobile-header :end */
+
+/* footer  */
 .footer-bar{
     height: 680px;
     background-color: black;
@@ -117,6 +125,7 @@ li {
 .footer-con{
     max-width:1310px;
     margin: 0 auto;
+    color: white;
 }
 
 .footer__why-buy{
@@ -131,3 +140,37 @@ font-size: 25px;
 .footer__why-buy>p{
     font-size: 20px;
 }
+
+.footer__menus>*{
+    font-size: 22px;
+    margin-bottom: 5px;
+}.footer__menus>*>ul>li:nth-child(1){
+    margin-bottom: 10px;
+}
+
+.footer__menus-newsLetter>ul>li:nth-child(2){
+    margin-top: 20px;
+    background-color: red;
+    padding: 20px;
+}
+
+.footer__menus-newsLetter>ul>li:nth-child(2)>a{
+  
+    width:40%;
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer__menus-useful-links{
+    height:100px;
+    background-color: #1e1f24;
+    color: white;
+}
+
+.footer__menus-useful-links__icons>ul>li>a{
+    font-size: 30px;
+    margin: 0 10px;
+}
+/* footer :end  */

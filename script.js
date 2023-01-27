@@ -17,6 +17,11 @@ index = {
            
         })
        
+    },
+
+    nav_bar_line_animation: function(){
+        
+
     }
 }
 
