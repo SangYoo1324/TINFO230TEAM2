@@ -24,16 +24,24 @@ li {
    
 
 }
-
+/* when mobile mode  */
 @media (max-width:1310px){
     .pc-header{
-       display: none;
+        display: none;
+   }
+   .footer-bar>.footer-con *{
+    font-size: 17px;
    }
    } 
-   
+   /* when  pc-wide mode  */
     @media (min-width:1310px){
        .mobile-header{
-           display:none;
+            z-index: 10;
+            display:none;
+       }
+
+       .mobile-side-bar{
+        display: none;
        }
     }
    
@@ -43,6 +51,7 @@ li {
 header.pc-header{
 position:fixed;
 width: 100%;
+z-index: 20;
 }
 
 .header-con{
@@ -113,11 +122,90 @@ width: 100%;
 /* pc-header :end */
 
 /* .mobile-header  */
-
+header.mobile-header{
+    z-index:10;
+    position:fixed;
+    width:100%;
+}
 /* .mobile-header :end */
+
+/* mobile-side-bar  */
+ .mobile-side-bar{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s;
+    z-index:11;
+    transition: visibility 0.5s, opacity 0.5s;
+    background-color:rgba(0,0,0,0.5);
+    position: fixed;
+ }
+
+  /* when side-bar not active, move sidebar by x-100%(outside screen)  */
+ .mobile-side-bar>.mobile-side-bar__contents{
+    transform: translateX(100%);
+    transition: transform 0.5s;
+ }
+
+ /* when mobile side-bar activated  */
+ .mobile-side-bar.active{
+    visibility: visible;
+    opacity:1;
+ }
+
+/* when mobile side-bar activated slides the contents container  */
+ .mobile-side-bar.active>.mobile-side-bar__contents{
+    transform: translateX(0%);
+    
+ }
+
+ .mobile-side-bar__btn-close> div{
+    top:40%;
+    transform: rotate(-45deg);
+ }
+
+ .mobile-side-bar__btn-close> div:last-child{
+    top:40%;
+    transform: rotate(45deg);
+ }
+
+ .mobile-side-bar__body__menu-box-1 > ul > li>a{
+    display: block;
+    padding: 20px;
+    font-weight: bold;
+    color:white;
+    font-size: 25px;
+ }
+
+ .mobile-side-bar__body__menu-box-1 > ul > li>
+ a:not(:only-child)::after{
+    content:"[+]";
+    float: right;
+ }
+ .mobile-side-bar__body__menu-box-1 > ul > li>
+ a:only-child::after{
+    content:"[=]";
+    float: right;
+ }
+ 
+
+.mobile-side-bar__menus-2nd{
+    display:block;
+    background-color: #1e1f24;
+}
+
+.mobile-side-bar__menus-2nd > li > a{
+    display: block;
+    padding: 20px;
+    font-weight: bold;
+    color:white;
+    font-size: 20px;
+ }
+
+/* mobile-side-bar :end */
 
 /* footer  */
 .footer-bar{
+    width:100%;
     height: 680px;
     background-color: black;
 }
@@ -174,3 +262,82 @@ font-size: 25px;
     margin: 0 10px;
 }
 /* footer :end  */
+
+/* main-page-slideshow  */
+.main-page-slideshow{
+   
+}
+.main-page-slideshow>.con{
+    position:relative;
+    margin: 0 auto;
+    max-width:1920px;
+    height:600px;
+    /* slide-0 slot  */
+    background-color: black;
+    /* background-image: url(./images/slide-0.jpg); */
+}
+
+.main-page-slideshow>.con>*{
+    position:absolute;
+    width:100%;
+    height:0%;
+    background-size: cover;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.main-page-slideshow>.con>.slide-1{
+    background-image: url(./images/slide-1.jpg);
+    /* height:100%; */
+   
+}
+
+.main-page-slideshow>.con>.slide-1>.slide-1__text-wrap{
+    position: absolute;
+    top:30%;
+    left:10%;
+    font-size: 30px;
+    color: white;
+}
+
+.main-page-slideshow>.con>.slide-2>.slide-2__text-wrap{
+    position: absolute;
+    top:30%;
+    left:10%;
+    font-size: 30px;
+    color: white;
+}
+
+.main-page-slideshow>.con>.slide-3>.slide-3__text-wrap{
+    position: absolute;
+    top:30%;
+    left:10%;
+    font-size: 30px;
+    color: white;
+}
+
+.main-page-slideshow>.con>.slide-4>.slide-4__text-wrap{
+    position: absolute;
+    top:30%;
+    left:10%;
+    font-size: 30px;
+    color: white;
+}
+
+
+.main-page-slideshow>.con>.slide-2{
+    background-image: url(./images/slide-2.jpg);
+}
+
+.main-page-slideshow>.con>.slide-3{
+    background-image: url(./images/slide-3.jpg);
+}
+
+.main-page-slideshow>.con>.slide-4{
+    background-image: url(./images/slide-4.jpg);
+}
+
+.main-page-slideshow>.con>*.active{
+   height:100%;
+}
+/* main-page-slideshow :end */
