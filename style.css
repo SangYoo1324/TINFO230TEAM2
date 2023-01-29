@@ -29,6 +29,13 @@ li {
     .pc-header{
         display: none;
    }
+
+   /* restrict the width of the all section to be no less than 600px
+   on mobile format */
+   .footer-bar, section{
+    min-width:600px;
+   }
+  
    .footer-bar>.footer-con *{
     font-size: 17px;
    }
