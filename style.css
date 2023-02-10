@@ -1,11 +1,5 @@
 /* Global settings  */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
-html{
-    width:412px;
-}
-body{
-    width:412px;
-}
 
 
 *{
@@ -32,6 +26,14 @@ li {
    
 
 }
+
+.text-yellow{
+    color:#ffbb33;
+}
+.text-gray{
+     color: #8E9097;
+}
+
 
    
 /* Global settings :End  */
@@ -211,7 +213,7 @@ z-index: 20;
 /* footer  */
 .footer-bar{
     width:100%;
-    max-height: 850px;
+    /* max-height: 850px; */
     background-color: black;
 }
 
@@ -382,8 +384,147 @@ font-size: 25px;
 }
 /* PC_Laptops */
 
+/* testimonials  */
+.testimonials>*{
+    width:50%;
+    height:550px;
+}
+
+.testimonials>.testimonials_left{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))
+      ,url("./images/testimonial_bg.jpg"); 
+    background-size: cover;
+    width:50%;
+    height:550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:90px;
+}
+
+.testimonials>.testimonials_left>.review_wrap{
+    width:70%;
+    
+}
+
+.testimonials>.testimonials_left>.review_wrap>p{
+    margin-bottom: 2px;
+}
+
+.shop_now_btn{
+    display: inline-block;
+    width:38%;
+    border:  solid 3px white;
+    padding: 10px 30px; 
+    margin-top: 10px;
+    text-align: center;
+}
+
+.testimonials_right{
+    position:relative;
+}
+
+.testimonials__slide_dot{
+    justify-content: space-evenly;
+    width: 150px;
+    height: 40px;
+    position: absolute;
+    bottom: 50px;
+    right: 300px;
+ 
+}
+
+.dot{
+    width:15px;
+    height:15px;
+    border-radius: 10px;
+    background-color: gray;
+   
+}
+
+/* testimonials  */
+
+/* event_carousel  */
+.event_carousel>.con{
+    height: 500px;
+    position:relative;
+}
+.event_carousel>.con> *{
+    position:absolute;
+    width:100%;
+    height: 500px;
+    background-size: cover;
+}
+.event_carousel>.con> *::before{
+    content: '';
+    background: linear-gradient(to right, black,transparent);
+    position:absolute;
+    left:0;
+    height:100%;
+    width:20%;
+}
+.event_carousel>.con> *:not(:last-child)>.event_carousel__text_wrap>a{
+display: inline-block;  
+padding: 10px 40px;
+border: 3px solid white;
+margin-top: 30px;
+
+}
+
+.event_carousel_slide_1{
+background-image: url("./images/five-years-of-amd-2.jpg");
+background-size: cover;
+}
+.event_carousel_slide_2{
+    background-image: url("./images/folding-at-home-banner.jpg");
+    background-size: cover;
+}
+.event_carousel_slide_3{
+    background-image: url("./images/Play_now_pay_later.jpg");
+    background-size: cover;
+}
+.event_carousel_slide_4{
+    background-image: url("./images/five-years-of-amd-2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.event_carousel__text_wrap{
+    margin-left: 15%;
+    margin-top: 5%;
+    z-index: 0;
+    color: white;
+    font-size: 30px;
+}
+
+/* css for arrow icon generate  */
+.slide_arrows{
+    
+    z-index: 0;
+    width:100%;
+    height:50px;
+}
+
+.arrow_l >*{
+    z-index: 0;
+    color: grey;
+}
+.arrow_r>*{
+    z-index: 0;
+    color: grey;
+}
+/* css for arrow icon generate  */
+
+/* event_carousel  */
+
+/* ************************mediaQueries******************************  */
+
 /* when mobile mode */
-@media (max-width:500px){
+@media (max-width:413px){
+    html,body{
+        width:412px;
+    }
+    
     .pc-header{
         display: none;
    }
@@ -391,16 +532,13 @@ font-size: 25px;
     width:412px;
    }
 
-   /* restrict the width of the all section to be no less than 600px
-   on mobile format */
-   .footer-bar, section{
-    max-width:412px;
+   .header__logo{
+    padding-right: 0px;
+    padding-left: 50px;
    }
-  
-   /* .footer__menus-useful-links{
-    margin:0 auto;
-    display: block;
-   } */
+
+ 
+
 
    /* section: PC-Laptops  */
    .PC_Laptops{
@@ -422,38 +560,76 @@ font-size: 25px;
    .PC_Laptops>.con>*{
     width:412px;
    }
-   
+   .footer-bar>.footer-con {
+    max-width:412px;
+    height:900px;
+   }
+   .footer__menus{
+    flex-direction: column;
+   }
    /* section: PC-Laptops  */
 
+   /* footer  */
    .footer-bar>.footer-con *{
-    font-size: 10px;
+    font-size: 11px;
    }
    
    .footer-bar img{
       display: none;
    }
-   } 
+   .footer__menus>*>ul>li{
+    text-align: center;
+   }
+      /* footer  */
 
+      /* testimonials  */
+   .testimonials{
+    flex-direction: column;
+   }
+   .testimonials>.testimonials_left, .testimonials>.testimonials_right {
+    width: 100%;
+   }
+
+   .more_reviews_btn{
+    padding-right: 0;
+   }
+   .testimonials_right{
+    padding-right:0;
+   }
+   .testimonials__slide_dot{
+    right:150px;
+   }
+/* testimonials  */
+
+/* .event_carousel  */
+   .event_carousel>.con{
+    height: 1000px;
+}
+
+
+.event_carousel__text_wrap{
+    margin-top: 500px;
+    background-color: black;
+    margin-left: 0;
+}
+
+.event_carousel>.con> *:not(:last-child)>.event_carousel__text_wrap>a{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+/* .event_carousel  */
+} 
+
+
+
+
+/* when mobile mode */
 
 /* when small mode  */
-@media (max-width:1310px){
+@media ((max-width:1310px) and (min-width:414px) ){
     .pc-header{
         display: none;
    }
-   .mobile-header{
-   
-   }
-
-   /* restrict the width of the all section to be no less than 600px
-   on mobile format */
-   /* .footer-bar, section{
-    max-width:412px;
-   } */
-  
-   /* .footer__menus-useful-links{
-    margin:0 auto;
-    display: block;
-   } */
 
    /* section: PC-Laptops  */
    .PC_Laptops{
@@ -468,25 +644,49 @@ font-size: 25px;
     align-items: center;
     
    }
-   .PC_Laptops>.con>*>.img-info-box{
-    /* width:412px; */
-    height:412px;
-   }
+
    .PC_Laptops>.con>*{
     width:100%;
    }
    
    /* section: PC-Laptops  */
 
+     /* testimonials  */
+     .testimonials{
+        flex-direction: column;
+       }
+       .testimonials>.testimonials_left, .testimonials>.testimonials_right {
+        width: 100%;
+       }
+    
+       .more_reviews_btn{
+        padding-right: 0;
+       }
+       .testimonials_right{
+        padding-right:0;
+       }
+       .testimonials__slide_dot{
+        right:500px;
+       }
+    /* testimonials  */
+
+
+        /* footer  */
    .footer-bar>.footer-con *{
-    font-size: 10px;
+    font-size: 15px;
    }
    
    .footer-bar img{
       display: none;
    }
-   } 
+   
+    /* footer  */
 
+       } 
+
+  
+   
+/* when small mode  */
 
 
    /* when  pc-wide mode  */
