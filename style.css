@@ -1,5 +1,12 @@
 /* Global settings  */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+html{
+    width:412px;
+}
+body{
+    width:412px;
+}
+
 
 *{
     margin: 0;
@@ -104,7 +111,7 @@ z-index: 20;
 /* pc-header :end */
 
 /* .mobile-header  */
-header.mobile-header{
+.mobile-header{
     z-index:10;
     position:fixed;
     width:100%;
@@ -204,7 +211,7 @@ header.mobile-header{
 /* footer  */
 .footer-bar{
     width:100%;
-    height: 680px;
+    max-height: 850px;
     background-color: black;
 }
 
@@ -375,20 +382,19 @@ font-size: 25px;
 }
 /* PC_Laptops */
 
-
-
-
-
-/* when mobile mode  */
-@media (max-width:1310px){
+/* when mobile mode */
+@media (max-width:500px){
     .pc-header{
         display: none;
+   }
+   .mobile-header{
+    width:412px;
    }
 
    /* restrict the width of the all section to be no less than 600px
    on mobile format */
    .footer-bar, section{
-    min-width:600px;
+    max-width:412px;
    }
   
    /* .footer__menus-useful-links{
@@ -407,21 +413,82 @@ font-size: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
    }
-   .PC_Laptops>.con>*>.img-info-box>img{
-    width:500px;
-    height:500px;
+   .PC_Laptops>.con>*>.img-info-box{
+    width:412px;
+    height:412px;
    }
+   .PC_Laptops>.con>*{
+    width:412px;
+   }
+   
    /* section: PC-Laptops  */
 
    .footer-bar>.footer-con *{
-    font-size: 15px;
+    font-size: 10px;
    }
-
+   
    .footer-bar img{
       display: none;
    }
    } 
+
+
+/* when small mode  */
+@media (max-width:1310px){
+    .pc-header{
+        display: none;
+   }
+   .mobile-header{
+   
+   }
+
+   /* restrict the width of the all section to be no less than 600px
+   on mobile format */
+   /* .footer-bar, section{
+    max-width:412px;
+   } */
+  
+   /* .footer__menus-useful-links{
+    margin:0 auto;
+    display: block;
+   } */
+
+   /* section: PC-Laptops  */
+   .PC_Laptops{
+    max-height: 3000px;
+   }
+   .PC_Laptops>.con > *{
+    flex-direction: column;
+   }
+   .PC_Laptops>.con > *>.img-info-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+   }
+   .PC_Laptops>.con>*>.img-info-box{
+    /* width:412px; */
+    height:412px;
+   }
+   .PC_Laptops>.con>*{
+    width:100%;
+   }
+   
+   /* section: PC-Laptops  */
+
+   .footer-bar>.footer-con *{
+    font-size: 10px;
+   }
+   
+   .footer-bar img{
+      display: none;
+   }
+   } 
+
+
+
    /* when  pc-wide mode  */
     @media (min-width:1310px){
        .mobile-header{
