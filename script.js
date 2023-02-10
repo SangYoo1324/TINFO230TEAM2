@@ -66,6 +66,7 @@ mobile_index = {
 init: function(){
     this.mobileTopbar_init();
     this.mobileSidebar_close();
+    this.mobileSidebar_menus_2nd();
 },
 mobileTopbar_init: function(){  // burger icon triggers side-bar
     $('.menu-expansion-burger').click(function(){
@@ -78,6 +79,7 @@ mobileSidebar_close: function(){ // x btn + transparent grey screen
         function(){
             console.log("sidebar closing triggered");
             $('.mobile-side-bar').removeClass('active');
+            $('.mobile-side-bar__body__menu-box-1 > ul > li').removeClass('active');
         }
     );
 
@@ -88,7 +90,24 @@ mobileSidebar_close: function(){ // x btn + transparent grey screen
         //.mobile.side-bar__contents-컨텐츠부분 클릭 시 클릭 이벤트가 부모클래스에까지 전파되어 창이 닫히는거 방지
         // .mobile-side-bar__btn-close- 버튼부분 클릭시 메뉴 외 부분까지 
         //연결되서 두번 클릭되는 문제 해결
+},
+
+mobileSidebar_menus_2nd: function(){
+
+    $('.mobile-side-bar__body__menu-box-1 > ul > li').click(function(e){
+        e.stopPropagation();
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+            console.log("sidebar 2nd ul activated");
+        }else{
+            $(this).addClass('active'); 
+            $(this).siblings().removeClass('active');
+        }
+      
+    });
 }
+
+
 };
 
 mobile_index.init();

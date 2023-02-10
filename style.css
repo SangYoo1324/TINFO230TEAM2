@@ -18,43 +18,14 @@ li {
     
 }
 
+
 .container{
     width: 1140px;
     margin: 0 auto;
    
 
 }
-/* when mobile mode  */
-@media (max-width:1310px){
-    .pc-header{
-        display: none;
-   }
 
-   /* restrict the width of the all section to be no less than 600px
-   on mobile format */
-   .footer-bar, section{
-    min-width:600px;
-   }
-  
-   .footer-bar>.footer-con *{
-    font-size: 15px;
-   }
-
-   .footer-bar img{
-      display: none;
-   }
-   } 
-   /* when  pc-wide mode  */
-    @media (min-width:1310px){
-       .mobile-header{
-            z-index: 10;
-            display:none;
-       }
-
-       .mobile-side-bar{
-        display: none;
-       }
-    }
    
 /* Global settings :End  */
 
@@ -196,13 +167,27 @@ header.mobile-header{
  a:only-child::after{
     content:"[=]";
     float: right;
+    cursor:default;
+ }
+ .mobile-side-bar__body__menu-box-1 > ul > li>
+ a:only-child{
+   
  }
  
 
 .mobile-side-bar__menus-2nd{
     display:block;
     background-color: #1e1f24;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    /* cursor: pointer; */
 }
+
+.mobile-side-bar__body__menu-box-1 > ul > li.active > .mobile-side-bar__menus-2nd{
+   max-height: 500px;
+}
+
 
 .mobile-side-bar__menus-2nd > li > a{
     display: block;
@@ -211,6 +196,8 @@ header.mobile-header{
     color:white;
     font-size: 20px;
  }
+
+
 
 /* mobile-side-bar :end */
 
@@ -352,3 +339,97 @@ font-size: 25px;
    height:100%;
 }
 /* main-page-slideshow :end */
+
+/* PC_Laptops */
+.PC_Laptops{
+    background-color: #1e1f24;
+    max-height:3000px;
+}
+
+.PC_Laptops>.con>*>.img-info-box{
+    padding: 20px 60px;
+    flex-grow: 0;
+}
+
+.PC_Laptops>.con>*>.img-info-box>img{
+    padding:30px;
+    width:300px;
+    height:300px;
+   
+    
+}
+
+.PC_Laptops>.con>*>.img-info-box>p{
+    font-size: 20px;
+    color: #C7C8CB;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+}
+.PC_Laptops>.con{
+   max-width: 1600px;
+}
+.PC_Laptops>.con>*{
+    width:1280px;
+}
+/* PC_Laptops */
+
+
+
+
+
+/* when mobile mode  */
+@media (max-width:1310px){
+    .pc-header{
+        display: none;
+   }
+
+   /* restrict the width of the all section to be no less than 600px
+   on mobile format */
+   .footer-bar, section{
+    min-width:600px;
+   }
+  
+   /* .footer__menus-useful-links{
+    margin:0 auto;
+    display: block;
+   } */
+
+   /* section: PC-Laptops  */
+   .PC_Laptops{
+    max-height: 3000px;
+   }
+   .PC_Laptops>.con > *{
+    flex-direction: column;
+   }
+   .PC_Laptops>.con > *>.img-info-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   .PC_Laptops>.con>*>.img-info-box>img{
+    width:500px;
+    height:500px;
+   }
+   /* section: PC-Laptops  */
+
+   .footer-bar>.footer-con *{
+    font-size: 15px;
+   }
+
+   .footer-bar img{
+      display: none;
+   }
+   } 
+   /* when  pc-wide mode  */
+    @media (min-width:1310px){
+       .mobile-header{
+            z-index: 10;
+            display:none;
+       }
+
+       .mobile-side-bar{
+        display: none;
+       }
+    }
