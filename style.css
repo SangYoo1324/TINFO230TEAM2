@@ -95,7 +95,7 @@ z-index: 20;
 .header__Icons>*{
     margin-right: 15px;
     margin-left: 15px;
-    font-size: 23px;
+    font-size: 18px;
 }
 
 .horizontal-underline{
@@ -161,10 +161,10 @@ z-index: 20;
 
  .mobile-side-bar__body__menu-box-1 > ul > li>a{
     display: block;
-    padding: 20px;
+    padding: 18px;
     font-weight: bold;
     color:white;
-    font-size: 25px;
+    font-size: 18px;
  }
 
  .mobile-side-bar__body__menu-box-1 > ul > li>
@@ -178,10 +178,7 @@ z-index: 20;
     float: right;
     cursor:default;
  }
- .mobile-side-bar__body__menu-box-1 > ul > li>
- a:only-child{
-   
- }
+
  
 
 .mobile-side-bar__menus-2nd{
@@ -213,7 +210,6 @@ z-index: 20;
 /* footer  */
 .footer-bar{
     width:100%;
-    /* max-height: 850px; */
     background-color: black;
 }
 
@@ -434,6 +430,10 @@ font-size: 25px;
  
 }
 
+.Testimonial_wrap-1{
+    padding: 0 30px;
+}
+
 .dot{
     width:15px;
     height:15px;
@@ -441,6 +441,7 @@ font-size: 25px;
     background-color: gray;
    
 }
+
 
 /* testimonials  */
 
@@ -463,11 +464,13 @@ font-size: 25px;
     height:100%;
     width:20%;
 }
-.event_carousel>.con> *:not(:last-child)>.event_carousel__text_wrap>a{
+.event_carousel__text_wrap>a{
+    width: 210px;
+    text-align: center;
 display: inline-block;  
 padding: 10px 40px;
 border: 3px solid white;
-margin-top: 30px;
+margin: 20px 30px;
 
 }
 
@@ -490,11 +493,24 @@ background-size: cover;
 }
 
 .event_carousel__text_wrap{
+    width:100%;
+    height:100%;
     margin-left: 15%;
     margin-top: 5%;
     z-index: 0;
     color: white;
     font-size: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.event_carousel__text_wrap>*{
+    margin: 0 15px;
+}
+
+
+ /* arrow  */
+.event_carousel>.con>:last-child{
+    height:500px;
 }
 
 /* css for arrow icon generate  */
@@ -502,7 +518,6 @@ background-size: cover;
     
     z-index: 0;
     width:100%;
-    height:50px;
 }
 
 .arrow_l >*{
@@ -540,7 +555,7 @@ background-size: cover;
  
 
 
-   /* section: PC-Laptops  */
+   /* Mobile: PC-Laptops  */
    .PC_Laptops{
     max-height: 3000px;
    }
@@ -567,11 +582,11 @@ background-size: cover;
    .footer__menus{
     flex-direction: column;
    }
-   /* section: PC-Laptops  */
+   /* Mobile: PC-Laptops  */
 
-   /* footer  */
+   /* Mobile: footer  */
    .footer-bar>.footer-con *{
-    font-size: 11px;
+    font-size: 12px;
    }
    
    .footer-bar img{
@@ -580,9 +595,9 @@ background-size: cover;
    .footer__menus>*>ul>li{
     text-align: center;
    }
-      /* footer  */
+      /* Mobile: footer  */
 
-      /* testimonials  */
+      /* Mobile: testimonials  */
    .testimonials{
     flex-direction: column;
    }
@@ -599,25 +614,38 @@ background-size: cover;
    .testimonials__slide_dot{
     right:150px;
    }
-/* testimonials  */
+/* Mobile: testimonials  */
 
-/* .event_carousel  */
+/* Mobile: event_carousel  */
    .event_carousel>.con{
     height: 1000px;
 }
 
 
 .event_carousel__text_wrap{
+    font-size: 25px;
     margin-top: 500px;
     background-color: black;
     margin-left: 0;
+    justify-content: center;
 }
 
-.event_carousel>.con> *:not(:last-child)>.event_carousel__text_wrap>a{
-    margin-top: 0;
-    margin-bottom: 10px;
+
+.event_carousel__text_wrap>p{
+    padding: 10px 15px;
 }
-/* .event_carousel  */
+.event_carousel>.con>:not(:last-child)>.event_carousel__text_wrap{
+
+}
+
+.more_reviews_btn{
+    padding-right: 0;
+}
+.shop_now_btn{
+    font-size: 15px;
+    padding: 10px 10px;
+}
+/*Mobile: event_carousel  */
 } 
 
 
@@ -625,13 +653,14 @@ background-size: cover;
 
 /* when mobile mode */
 
-/* when small mode  */
+/* when small mode:  */
 @media ((max-width:1310px) and (min-width:414px) ){
     .pc-header{
         display: none;
    }
+   
 
-   /* section: PC-Laptops  */
+   /*small mode: PC-Laptops  */
    .PC_Laptops{
     max-height: 3000px;
    }
@@ -649,9 +678,9 @@ background-size: cover;
     width:100%;
    }
    
-   /* section: PC-Laptops  */
+   /* small mode: section: PC-Laptops  */
 
-     /* testimonials  */
+     /*small mode: testimonials  */
      .testimonials{
         flex-direction: column;
        }
@@ -668,12 +697,13 @@ background-size: cover;
        .testimonials__slide_dot{
         right:500px;
        }
-    /* testimonials  */
+    /*small mode: testimonials  */
 
 
-        /* footer  */
+        /*small mode: footer  */
    .footer-bar>.footer-con *{
     font-size: 15px;
+
    }
    
    .footer-bar img{
