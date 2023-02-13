@@ -5,6 +5,8 @@ pc_index = {
         this.second_nav_bar_show();
         this. nav_bar_line_animation();
         this. main_page_slideshow_animation();
+        this.PC_Laptops_animation();
+        this.testimonial_slideShow_animation();
     },
 
     second_nav_bar_show: function(){
@@ -26,38 +28,95 @@ pc_index = {
 
     },
     main_page_slideshow_animation: function(){
-        let slides = $('.main-page-slideshow>.con>*');
-
-        slide_looping(slides);
+        let slides = $('.main-page-slideshow>.con>*:not(:last-child)');
+        let dots = $('.main-page__slide_dot >*');
+        slide_looping(slides,dots);
 
       setInterval(function(){
-         slide_looping(slides); 
+         slide_looping(slides,dots); 
         },16000);
          
+    },
+    PC_Laptops_animation: function(){
+
+        // let slides = document.querySelectorAll('.PC_Laptops>.con > *');
+        let slides = $('.PC_Laptops>.con > *').get();
+        console.log(slides);
+        const Observer =  new IntersectionObserver((entries,observer)=>{
+            entries.forEach(entry=>{
+                if(entry.isIntersecting){
+                    $(entry.target).css('opacity','1');
+                    console.log(entry+"이 intersecting 했다");
+                }else
+                $(entry.target).css('opacity','0');
+
+            });
+
+        
+           
+          
+       
+        });
+            // observing all elements on slides(line1,line2)
+         slides.forEach(obj =>{
+                Observer.observe(obj);
+           })
+    },
+
+    testimonial_slideShow_animation: function(){
+        const slides  = $('section.testimonials>*:not(:last-child)');
+       const dots = $('.testimonials__slide_dot>*');
+        console.log(slides);
+        
+        slide_looping(slides,dots);
+
+      setInterval(function(){
+         slide_looping(slides,dots); 
+         
+         console.log("testimonial 돌아가고 있다");
+        },16000);
+
+    
     }
 }
 
 pc_index.init();
 
 
-// main_page_slideshow_animation(sub-method)
-function slide_looping(slides){
+// slideshow_animation(sub-method)   dots can be null
+function slide_looping(slides,dots){
     for(let i = 0; i<slides.length; i++){
         setTimeout(function(){
             if(!$(slides.eq(i)).hasClass('active')){
                 $(slides.eq(i)).addClass('active');
                 console.log(`slide-${i}activated`);
+                    // for dots
+                    console.log(dots!=null);
+                    if(dots!=null){
+                        console.log(i+"th slide for testimonial");
+                        dots.eq(i).addClass('active');
+                        dots.eq(i).siblings().removeClass('active');
+                    }
 
             }
             $(slides.eq(i)).siblings().removeClass('active');
                 // console.log(`slide-${i}removed`);
-            
         },4000*i);
         
     }
 
 }
 
+//testimonial slideshow Dot(sub-method)
+function testimonial_dot_chng(slides,dots){
+    for(let i=0; i<slides.length; i++)
+    if(slides.eq(i).hasClass('active')){
+        console.log(i+"th slide for testimonial");
+        dots.eq(i).css('background-color','black');
+        dots.eq(i).siblings().removeClass('active');
+    }
+
+}
 
 
 //mobile index

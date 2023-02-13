@@ -280,7 +280,7 @@ font-size: 25px;
     /* background-image: url(./images/slide-0.jpg); */
 }
 
-.main-page-slideshow>.con>*{
+.main-page-slideshow>.con>*:not(:last-child){
     position:absolute;
     width:100%;
     height:0%;
@@ -289,11 +289,7 @@ font-size: 25px;
     transition: height 1s ease-in-out;
 }
 
-.main-page-slideshow>.con>.slide-1{
-    background-image: url(./images/slide-1.jpg);
-    /* height:100%; */
-   
-}
+
 
 .main-page-slideshow>.con>.slide-1>.slide-1__text-wrap{
     position: absolute;
@@ -327,6 +323,11 @@ font-size: 25px;
     color: white;
 }
 
+.main-page-slideshow>.con>.slide-1{
+    background-image: url(./images/slide-1.jpg);
+    /* height:100%; */
+   
+}
 
 .main-page-slideshow>.con>.slide-2{
     background-image: url(./images/slide-2.jpg);
@@ -343,17 +344,65 @@ font-size: 25px;
 .main-page-slideshow>.con>*.active{
    height:100%;
 }
+.main-page__slide_dot{
+    z-index: 1;
+    top:95%;
+    left:50%;
+    width:300px;
+    transform: translate3d(-50%,-50%,0);
+    justify-content: space-between;
+
+}
+.main-page__slide_dot >.dot{
+    width:70px;
+    height:10px;
+    background-color: grey;
+    margin: 5px, 10px;
+    
+}
+
+.main-page__slide_dot >.dot.active{
+    background-color: white;
+}
+
+
+
 /* main-page-slideshow :end */
+
+/* bg  */
+.bg{
+   background-attachment: fixed;
+    background-image: url("./images/bg_section.jpg"),
+    linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)
+    );
+    width:100%;
+    height:300px;
+}
+/* bg  */
 
 /* PC_Laptops */
 .PC_Laptops{
     background-color: #1e1f24;
     max-height:3000px;
 }
+.PC_Laptops>.con>*{
+    background-color: #1e1f24;
+    max-height:3000px;
+    opacity: 0;
+    transition: opacity 3s;
+}
 
 .PC_Laptops>.con>*>.img-info-box{
     padding: 20px 60px;
     flex-grow: 0;
+    transition:transform 1s;
+    cursor:pointer;
+}
+.PC_Laptops>.con>*>.img-info-box:hover{
+    padding: 20px 60px;
+    flex-grow: 0;
+    transform: scale(1.2,1.2);
+
 }
 
 .PC_Laptops>.con>*>.img-info-box>img{
@@ -381,16 +430,30 @@ font-size: 25px;
 /* PC_Laptops */
 
 /* testimonials  */
-.testimonials>*{
+section.testimonials{
+height:550px;
+position:relative;
+background-color: black;
+}
+section.testimonials>*:not(:last-child){
+    transform:translate(-100%);
+    transition: transform 1s ease-in-out;
+    flex-grow: 1;
+    width:100%;
+}
+section.testimonials>*.active{
+    transform:translate(0%);
+}
+
+.testimonials_slide_1>*,.testimonials_slide_2>*,.testimonials_slide_3>*,
+.testimonials_slide_4>*{
     width:50%;
     height:550px;
 }
-
-.testimonials>.testimonials_left{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))
-      ,url("./images/testimonial_bg.jpg"); 
+ 
+/* common css for .testimonials_left */
+.testimonials_left{
     background-size: cover;
-    width:50%;
     height:550px;
     display: flex;
     justify-content: center;
@@ -398,31 +461,60 @@ font-size: 25px;
     padding-bottom:90px;
 }
 
-.testimonials>.testimonials_left>.review_wrap{
+.testimonials_slide_1>.testimonials_left{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))
+      ,url("./images/testimonial_bg.jpg"); 
+}
+
+.testimonials_slide_2>.testimonials_left{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))
+      ,url("./images/five-years-of-amd-2.jpg"); 
+
+}
+.testimonials_slide_3>.testimonials_left{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))
+      ,url("./images/five-years-of-amd-2.jpg"); 
+
+}
+
+.testimonials_slide_4>.testimonials_left{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))
+      ,url("./images/five-years-of-amd-2.jpg"); 
+
+}
+
+
+.testimonials_left>.review_wrap{
     width:70%;
     
 }
-
-.testimonials>.testimonials_left>.review_wrap>p{
+.testimonials_left>.review_wrap>p{
     margin-bottom: 2px;
 }
 
+/* common css for .testimonials_right */
+.testimonials_right{
+    background-color: white;
+    /* height:100%; */
+    }
 .review-wrap__btn_group{
  display: flex;
- margin-top: 10px;     
+ margin-top: 10px;  
+ justify-content: space-between;   
 }
 .shop_now_btn{
     display: inline-block;
     width:38%;
     border:  solid 3px white;
-    padding: 10px 30px; 
+    padding: 10px 25px; 
     margin-bottom: 10px;
     text-align: center;
 }
-
-.testimonials_right{
-    position:relative;
+.more_reviews_btn{
+    padding-right: 150px;
 }
+
+
 
 .testimonials__slide_dot{
     justify-content: space-evenly;
@@ -444,6 +536,9 @@ font-size: 25px;
     border-radius: 10px;
     background-color: gray;
    
+}
+.dot.active{
+    background-color: black;
 }
 
 
@@ -493,7 +588,6 @@ background-size: cover;
 .event_carousel_slide_4{
     background-image: url("./images/five-years-of-amd-2.jpg");
     background-size: cover;
-    background-position: center;
 }
 
 .event_carousel__text_wrap{
@@ -536,6 +630,66 @@ background-size: cover;
 
 /* event_carousel  */
 
+/* deals  */
+.deals>.con{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 50px auto;
+    
+}
+.deals>.con>*{
+    width:300px;
+    text-align: center;
+    flex-grow: 1;
+    border-right: 1px solid lightgray;
+    padding:  100px 50px;
+    flex-basis: 0;
+}
+.deals>.con>*>i{
+font-size: 70px;
+color: #cc181e;
+margin-bottom: 10px;
+transition: transform 1s ease-in-out, background-color 1s ease-in-out,
+color 1s ease-in-out ;
+padding: 10px;
+}
+/* deals Icon hover animation  */
+.deals>.con>*>i:hover{
+    transform: rotate(360deg);
+    color: white;
+    background-color: #cc181e;
+    display: inline-block;
+    }
+.deals>.con>*>ul>li{
+    width:300px;
+    text-align: left;
+    list-style:circle;
+    margin: 0 auto;
+}
+
+a.learn_more,a.join{
+    width:200px;
+margin: 0 auto;
+margin-top: 70px;
+color: #cc181e;
+padding: 10px 20px;
+border: 2px solid #cc181e;
+border-radius: 5px;
+transition: background-color 0.5s ease-in;
+}
+
+a.learn_more:hover,a.join:hover{
+    margin-top: 70px;
+    color: #cc181e;
+    background-color: #cc181e ;
+    color: white;
+    }
+
+
+
+/* deals  */
+
 /* ************************mediaQueries******************************  */
 
 /* when mobile mode */
@@ -556,8 +710,26 @@ background-size: cover;
     padding-left: 50px;
    }
 
- 
+ /* Mobile: slide  */
+ .main-page-slideshow>.con>.slide-1{
+    background-image: url(./images/slide-1_mobile.jpg);
+    /* height:100%; */
+   
+}
 
+.main-page-slideshow>.con>.slide-2{
+    background-image: url(./images/slide-2_mobile.jpg);
+}
+
+.main-page-slideshow>.con>.slide-3{
+    background-image: url(./images/slide-3_mobile.jpg);
+}
+
+.main-page-slideshow>.con>.slide-4{
+    background-image: url(./images/slide-4_mobile.jpg);
+}
+
+ /* Mobile: slide  */
 
    /* Mobile: PC-Laptops  */
    .PC_Laptops{
@@ -602,12 +774,21 @@ background-size: cover;
       /* Mobile: footer  */
 
       /* Mobile: testimonials  */
-   .testimonials{
+      section.testimonials{
+        height:1100px;
+        position:relative;
+        }
+
+   .testimonials>*:not(:last-child){
     flex-direction: column;
    }
-   .testimonials>.testimonials_left, .testimonials>.testimonials_right {
+
+   
+    .testimonials_slide_1>*,.testimonials_slide_2>*,
+    .testimonials_slide_3>*, .testimonials_slide_4>* {
     width: 100%;
    }
+   
 
    .more_reviews_btn{
     padding-right: 0;
@@ -622,7 +803,7 @@ background-size: cover;
    }
 
    .testimonials__slide_dot{
-    top: 500px;
+    top: 1050px;
     right:150px;
    }
 /* Mobile: testimonials  */
@@ -646,8 +827,26 @@ background-size: cover;
     padding: 10px 15px;
 }
 .event_carousel>.con>:not(:last-child)>.event_carousel__text_wrap{
-
 }
+
+.event_carousel_slide_1{
+    background-image: url("./images/five-years-of-amd-2_mobile.jpg");
+    background-size: cover;
+    }
+    .event_carousel_slide_2{
+        background-image: url("./images/folding-at-home-banner_mobile.jpg");
+        background-size: cover;
+    }
+    .event_carousel_slide_3{
+        background-image: url("./images/Play_now_pay_later_mobile.jpg");
+        background-size: cover;
+    }
+    .event_carousel_slide_4{
+        display: none;
+        background-image: url("./images/five-years-of-amd-2_mobile.jpg");
+        background-size: cover;
+        background-position: center;
+    }
 
 .more_reviews_btn{
     padding-right: 0;
@@ -657,6 +856,24 @@ background-size: cover;
     padding: 10px 10px;
 }
 /*Mobile: event_carousel  */
+ 
+/*Mobile: deals */
+.deals>.con{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: 50px auto;
+    
+}
+
+.deals>.con>*{
+    width: 412px;
+    border-right: none;
+
+}
+/*Mobile: deals */
+
 } 
 
 
@@ -669,7 +886,7 @@ background-size: cover;
     .pc-header{
         display: none;
    }
-   
+
 
    /*small mode: PC-Laptops  */
    .PC_Laptops{
