@@ -7,6 +7,7 @@ pc_index = {
         this. main_page_slideshow_animation();
         this.PC_Laptops_animation();
         this.testimonial_slideShow_animation();
+        this.event_carousel_slide_animation();
     },
 
     second_nav_bar_show: function(){
@@ -77,6 +78,47 @@ pc_index = {
         },16000);
 
     
+    },
+    event_carousel_slide_animation: function(){
+        let slide_count = 0;
+       
+        const left_btn = $('.arrow_l');
+        const right_btn = $('.arrow_r');
+        const carousel_slides= $('.event_carousel>.con> *:not(:last-child)');
+
+         //initialize 1st slide
+         carousel_slides.eq(slide_count).addClass('active');
+         carousel_slides.eq(slide_count).siblings().removeClass('active');
+ 
+
+        left_btn.click(function(){
+            if(slide_count==0){
+                slide_count=carousel_slides.length-1;
+                carousel_slides.eq(slide_count).addClass('active');
+                 carousel_slides.eq(slide_count).siblings().removeClass('active');
+                console.log("slide가 이동합니다"+slide_count);
+            }else{
+                slide_count--;
+                carousel_slides.eq(slide_count).addClass('active');
+                 carousel_slides.eq(slide_count).siblings().removeClass('active');
+                console.log("slide가 이동합니다"+slide_count);
+
+            }
+        });
+        right_btn.click(function(){
+            if(slide_count==carousel_slides.length-1){
+                slide_count=0;
+                carousel_slides.eq(slide_count).addClass('active');
+                 carousel_slides.eq(slide_count).siblings().removeClass('active');
+                console.log("slide가 이동합니다"+slide_count);
+            }else{
+                slide_count++;
+           carousel_slides.eq(slide_count).addClass('active');
+           carousel_slides.eq(slide_count).siblings().removeClass('active');
+           console.log("slide가 이동합니다"+slide_count);
+            } 
+
+        });
     }
 }
 
