@@ -277,7 +277,7 @@ font-size: 25px;
     height:600px;
     /* slide-0 slot  */
     background-color: black;
-    /* background-image: url(./images/slide-0.jpg); */
+    /* background-image: url(../images/slide-0.jpg); */
 }
 
 .main-page-slideshow>.con>*:not(:last-child){
@@ -324,21 +324,21 @@ font-size: 25px;
 }
 
 .main-page-slideshow>.con>.slide-1{
-    background-image: url(./images/slide-1.jpg);
+    background-image: url(../images/slide-1.jpg);
     /* height:100%; */
    
 }
 
 .main-page-slideshow>.con>.slide-2{
-    background-image: url(./images/slide-2.jpg);
+    background-image: url(../images/slide-2.jpg);
 }
 
 .main-page-slideshow>.con>.slide-3{
-    background-image: url(./images/slide-3.jpg);
+    background-image: url(../images/slide-3.jpg);
 }
 
 .main-page-slideshow>.con>.slide-4{
-    background-image: url(./images/slide-4.jpg);
+    background-image: url(../images/slide-4.jpg);
 }
 
 .main-page-slideshow>.con>*.active{
@@ -372,7 +372,7 @@ font-size: 25px;
 /* bg  */
 .bg{
    background-attachment: fixed;
-    background-image: url("./images/bg_section.jpg"),
+    background-image: url("../images/bg_section.jpg"),
     linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)
     );
     width:100%;
@@ -463,23 +463,23 @@ section.testimonials>*.active{
 
 .testimonials_slide_1>.testimonials_left{
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))
-      ,url("./images/testimonial_bg.jpg"); 
+      ,url("../images/testimonial_bg.jpg"); 
 }
 
 .testimonials_slide_2>.testimonials_left{
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))
-      ,url("./images/five-years-of-amd-2.jpg"); 
+      ,url("../images/five-years-of-amd-2.jpg"); 
 
 }
 .testimonials_slide_3>.testimonials_left{
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))
-      ,url("./images/five-years-of-amd-2.jpg"); 
+      ,url("../images/five-years-of-amd-2.jpg"); 
 
 }
 
 .testimonials_slide_4>.testimonials_left{
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))
-      ,url("./images/five-years-of-amd-2.jpg"); 
+      ,url("../images/five-years-of-amd-2.jpg"); 
 
 }
 
@@ -579,19 +579,19 @@ margin: 20px 30px;
 }
 
 .event_carousel_slide_1{
-background-image: url("./images/five-years-of-amd-2.jpg");
+background-image: url("../images/five-years-of-amd-2.jpg");
 background-size: cover;
 }
 .event_carousel_slide_2{
-    background-image: url("./images/folding-at-home-banner.jpg");
+    background-image: url("../images/folding-at-home-banner.jpg");
     background-size: cover;
 }
 .event_carousel_slide_3{
-    background-image: url("./images/Play_now_pay_later.jpg");
+    background-image: url("../images/Play_now_pay_later.jpg");
     background-size: cover;
 }
 .event_carousel_slide_4{
-    background-image: url("./images/five-years-of-amd-2.jpg");
+    background-image: url("../images/five-years-of-amd-2.jpg");
     background-size: cover;
 }
 
@@ -696,7 +696,7 @@ a.learn_more:hover,a.join:hover{
         width: 100%;
         height: 600px;
         background-image: linear-gradient(to right,rgba(0,0,0,0.6),rgba(0,0,0,1)),
-        url("./images/pc_assembly.jpg") ;
+        url("../images/pc_assembly.jpg") ;
         background-size: cover;
     }
 /* deals  */
@@ -780,21 +780,21 @@ color 0.5s ease-in;
 
  /* Mobile: slide  */
  .main-page-slideshow>.con>.slide-1{
-    background-image: url(./images/slide-1_mobile.jpg);
+    background-image: url(../images/slide-1_mobile.jpg);
     /* height:100%; */
    
 }
 
 .main-page-slideshow>.con>.slide-2{
-    background-image: url(./images/slide-2_mobile.jpg);
+    background-image: url(../images/slide-2_mobile.jpg);
 }
 
 .main-page-slideshow>.con>.slide-3{
-    background-image: url(./images/slide-3_mobile.jpg);
+    background-image: url(../images/slide-3_mobile.jpg);
 }
 
 .main-page-slideshow>.con>.slide-4{
-    background-image: url(./images/slide-4_mobile.jpg);
+    background-image: url(../images/slide-4_mobile.jpg);
 }
 
  /* Mobile: slide  */
@@ -898,20 +898,20 @@ color 0.5s ease-in;
 }
 
 .event_carousel_slide_1{
-    background-image: url("./images/five-years-of-amd-2_mobile.jpg");
+    background-image: url("../images/five-years-of-amd-2_mobile.jpg");
     background-size: cover;
     }
     .event_carousel_slide_2{
-        background-image: url("./images/folding-at-home-banner_mobile.jpg");
+        background-image: url("../images/folding-at-home-banner_mobile.jpg");
         background-size: cover;
     }
     .event_carousel_slide_3{
-        background-image: url("./images/Play_now_pay_later_mobile.jpg");
+        background-image: url("../images/Play_now_pay_later_mobile.jpg");
         background-size: cover;
     }
     .event_carousel_slide_4{
         display: none;
-        background-image: url("./images/five-years-of-amd-2_mobile.jpg");
+        background-image: url("../images/five-years-of-amd-2_mobile.jpg");
         background-size: cover;
         background-position: center;
     }
