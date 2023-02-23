@@ -45,10 +45,6 @@ width: 100%;
 z-index: 20;
 }
 
-.header-con{
-
-}
-
 .header__menus>ul>li{
     font-size: 20px;;
     padding: 15px;
@@ -359,3 +355,54 @@ font-size: 25px;
         display: none;
        }
     }
+
+
+     /* body customization */
+
+     section.listing
+     {
+         padding-top: 100px;
+         background-color: #1e1f24;
+         color: white;
+     }
+ 
+     strong.caption
+     {
+         font-size: 25pt;
+         text-align: center;
+     }
+ 
+     strong.footnote
+     {
+         margin: 0 auto;
+         padding-left: 500px;
+     }
+ 
+     ul.specifications
+     {
+         padding-left: 50px;
+     }
+     ul.specifications > li
+     {
+         list-style: circle;
+     }
+ 
+     table.computer
+     {   
+         border: thin solid;
+         padding-left: 50px;
+         margin: 0 auto;
+     }
+     th, td
+     {
+         border: thin solid;
+         padding-left: 75px;
+         padding-right: 75px;
+         padding-top: 10px;
+         padding-bottom: 10px;
+     }
+ 
+     th.header
+     {
+         text-align: center;
+     }

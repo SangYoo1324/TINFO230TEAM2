@@ -45,10 +45,6 @@ width: 100%;
 z-index: 20;
 }
 
-.header-con{
-
-}
-
 .header__menus>ul>li{
     font-size: 20px;;
     padding: 15px;
@@ -267,9 +263,6 @@ font-size: 25px;
 /* footer :end  */
 
 /* main-page-slideshow  */
-.main-page-slideshow{
-   
-}
 .main-page-slideshow>.con{
     position:relative;
     margin: 0 auto;
@@ -894,8 +887,6 @@ color 0.5s ease-in;
 .event_carousel__text_wrap>p{
     padding: 10px 15px;
 }
-.event_carousel>.con>:not(:last-child)>.event_carousel__text_wrap{
-}
 
 .event_carousel_slide_1{
     background-image: url("../images/five-years-of-amd-2_mobile.jpg");
@@ -1025,4 +1016,54 @@ color 0.5s ease-in;
        .mobile-side-bar{
         display: none;
        }
+    }
+
+    /* body customization */
+
+    section.listing
+    {
+        padding-top: 100px;
+        background-color: #1e1f24;
+        color: white;
+    }
+
+    strong.caption
+    {
+        font-size: 25pt;
+        text-align: center;
+    }
+
+    strong.footnote
+    {
+        margin: 0 auto;
+        padding-left: 500px;
+    }
+
+    ul.specifications
+    {
+        padding-left: 50px;
+    }
+    ul.specifications > li
+    {
+        list-style: circle;
+    }
+
+    table.computer
+    {   
+        border: thin solid;
+        padding-left: 50px;
+        margin: 0 auto;
+    }
+    th, td
+    {
+        border: thin solid;
+        padding-left: 75px;
+        padding-right: 75px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    th.header
+    {
+        text-align: center;
     }
